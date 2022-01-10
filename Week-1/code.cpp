@@ -1,11 +1,9 @@
-// Author: Sandipan Das
-
 #include<bits/stdc++.h>
 using namespace std;
 
-void createFile(){
+void createFile(string fileName){
 	fstream file;
-	file.open("test.txt", ios::out);
+	file.open(fileName, ios::out);
 	if(!file){
 	   cout<<"Error in creating file!!\n";
 	   return;
@@ -15,9 +13,9 @@ void createFile(){
    cout<<"\n";
 }
 
-void readFile(){
+void readFile(string fileName){
 	ifstream file;
-	file.open("test.txt");
+	file.open(fileName);
 	char ch;
 	if(!file){
       cout<<"Error: File could not be opened!!\n";
@@ -33,16 +31,15 @@ void readFile(){
 	cout<<"\n\n";
 }
 
-void writeToFile(){
+void writeToFile(string fileName, string contents){
 	ofstream file;
-	file.open("test.txt");
-	string contents="My name is Sandipan Das!!\n";
+	file.open(fileName);
 	file<<contents;
 	file.close();
 }
 
-void deleteFile(){
-	int status=remove("test.txt");
+void deleteFile(char str[]){
+	int status=remove(str);
     if(status==0)
         cout<<"File Deleted Successfully!!\n";
     else
@@ -50,8 +47,8 @@ void deleteFile(){
 }
 
 int main(){
-	createFile();
-	writeToFile();
-	readFile();
-	deleteFile();
+	createFile("test1.txt");
+	writeToFile("test1.txt", "Sandipan Das");
+	readFile("test1.txt");
+	deleteFile("test1.txt");
 }
