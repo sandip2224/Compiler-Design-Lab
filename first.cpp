@@ -1,3 +1,10 @@
+// Input: input.txt
+
+// S->ACB|CbB|Ba
+// A->da|BC
+// B->g|e
+// C->h|e
+
 #include <bits/stdc++.h>
 using namespace std;
 
