@@ -1,4 +1,4 @@
-// int a = b + 12 + 1c ;
+// input.txt, int a = b + 12 + 1c ;
 
 #include <bits/stdc++.h> 
 using namespace std; 
